@@ -10,3 +10,6 @@ class Listing < ActiveRecord::Base
 		validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 	end			   	
 end
+
+
+#I MAY HAVE TO CHANGE IF ELSE STATEMENT SOMEHOW
