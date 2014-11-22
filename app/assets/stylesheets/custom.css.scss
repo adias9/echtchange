@@ -17,7 +17,7 @@ body {
 	font-family: 'Lobster', cursive; /*font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 	font-weight: 400;
 	color: #FFFFFF;
-	font-size: 30px;
+	font-size: 32px;
 }
 
 .navbar-default .navbar-brand:hover {
@@ -26,13 +26,17 @@ body {
 
 .navbar-default .navbar-nav > li > a {
 	font-family: 'Lobster', cursive;
-	font-size: 14px;
+	font-size: 17px;
 	font-weight: bold;
 	color: #019285;
 }
 
 .navbar-default .navbar-nav > li > a:hover { 
 	color: #FFFFFF; 
+}
+
+.nav-pills > li > a {
+	font-size: 17px;
 }
 
 .center {
