@@ -1,27 +1,38 @@
 @import "bootstrap";
+@import "font-awesome";
+@import url(http://fonts.googleapis.com/css?family=Lobster);
 
 body {
-	background-color: #F5F5F1;
+	background-color: #ECF0F1;
 	color: #333333;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Lobster', cursive;
+	/*font-family: Arial, Helvetica, sans-serif;*/
 }
 
 .navbar-default {
-	background-color: #EFEFEB;
+	background-color: #2C3E50;
 }
 
 .navbar-default .navbar-brand {
-	font-family: guardian-egyptt, georgia, serif;
+	font-family: 'Lobster', cursive; /*font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
 	font-weight: 400;
-	color: #d5641c;
+	color: #FFFFFF;
 	font-size: 30px;
 }
 
+.navbar-default .navbar-brand:hover {
+	color: #FFFFFF;
+}
+
 .navbar-default .navbar-nav > li > a {
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Lobster', cursive;
 	font-size: 14px;
 	font-weight: bold;
 	color: #019285;
+}
+
+.navbar-default .navbar-nav > li > a:hover { 
+	color: #FFFFFF; 
 }
 
 .center {
@@ -51,8 +62,171 @@ body {
 
 .jumbotron {
 	background-image: url('https://dl.dropboxusercontent.com/s/nn5tufvjg0yppvg/jumbotron.jpg?dl=0');
+	background-size: 2000px 900px;
+
 	h1, h2 {
-		font-family: guardian-egyptt, georgia, serif;
-		color: #019285;
+		font-family: 'Lobster', cursive;
+		color: navajowhite;
+		padding-left: 60px;
 	}
 }
+
+.btn-lg {
+	font-size: 25px;
+}
+
+#how-to {
+	background-color: #303233;
+}
+
+#how-to .fa-stack {
+	color: #2C3E50;
+}
+
+#how-to p {
+	color: #FFFFFF;
+	font-size: 25px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#why-us {
+	background-color: #2C3E50;
+}
+
+#why-us p {
+	color: #FFFFFF;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 25px;
+}
+
+.homepage {
+	text-align: center;
+}
+
+.homepage h2, h3 {
+	color: #019285;
+	padding: 0px;
+	font-size: 30px;
+}
+
+.homepage h2 {
+	padding-top: 10px;
+}
+
+.homepage h3 {
+	margin-top: 10px;
+}
+
+.homepage p {
+	font-size: 21px;
+	font-weight: 300;
+}
+
+.homepage a {
+	color: 	#FFFFFF;
+}
+
+.homepage a:hover {
+	color: #303233;
+	text-decoration: none;
+	opacity: .8;
+}
+
+.homepage hr {
+	border-color: #019285;
+	width: 160px;
+	margin-top: 15px;
+}
+
+@media (min-width: 1500px) {
+	#how-to {
+		margin-top: 0px;
+		margin-right: -200px;
+		margin-left: -200px;
+		padding-top: 40px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 10px;
+	}
+
+	#why-us {
+		margin-right: -200px;
+		margin-left: -200px;
+		padding-top: 2px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 10px;
+	}
+}
+
+@media (max-width: 1500px) {
+	#how-to {
+		margin-top: -20px;
+		margin-right: 0px;
+		margin-left: 0px;
+		padding-top: 40px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 10px;
+	}
+
+	#why-us {
+		margin-right: 0px;
+		margin-left: 0px;
+		padding-top: 2px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 10px;
+	}
+}
+
+@media (max-width: 991px) {
+	#how-to {
+		margin-top: -20px;
+		margin-right: 0px;
+		margin-left: 0px;
+		padding-top: 40px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 10px;
+	}
+
+	#why-us {
+		margin-right: 0px;
+		margin-left: 0px;
+		padding-top: 2px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 10px;
+	}
+}
+
+@media (max-width: 767px) {
+	#how-to {
+		margin-top: -20px;
+		margin-right: 0px;
+		margin-left: 0px;
+		padding-top: 40px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 10px;
+	}
+
+	#why-us {
+		margin-right: 0px;
+		margin-left: 0px;
+		padding-top: 2px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 10px;
+	}
+}
+
