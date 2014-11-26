@@ -5,8 +5,7 @@
 body {
 	background-color: #ECF0F1;
 	color: #333333;
-	font-family: 'Lobster', cursive;
-	/*font-family: Arial, Helvetica, sans-serif;*/
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar-default {
@@ -25,7 +24,7 @@ body {
 }
 
 .navbar-default .navbar-nav > li > a {
-	font-family: 'Lobster', cursive;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 17px;
 	font-weight: bold;
 	color: #019285;
@@ -81,6 +80,7 @@ body {
 
 #how-to {
 	background-color: #303233;
+	font-family: 'Lobster', cursive;
 }
 
 #how-to .fa-stack {
@@ -90,16 +90,17 @@ body {
 #how-to p {
 	color: #FFFFFF;
 	font-size: 25px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 #why-us {
 	background-color: #2C3E50;
+	font-family: 'Lobster', cursive;
 }
 
 #why-us p {
 	color: #FFFFFF;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 25px;
 }
 
