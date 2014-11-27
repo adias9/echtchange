@@ -1,35 +1,39 @@
 @import "bootstrap";
-@import "font-awesome";
-@import url(http://fonts.googleapis.com/css?family=Lobster);
 
 body {
-	background-color: #ECF0F1;
+	background-color: #F5F5F1;
 	color: #333333;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar-default {
-	background-color: #2C3E50;
+	background-color: #EFEFEB;
 }
 
 .navbar-default .navbar-brand {
-	font-family: 'Lobster', cursive; /*font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+	font-family: guardian-egyptt, georgia, serif;
 	font-weight: 400;
+<<<<<<< HEAD
 	color: #FFFFFF;
 	font-size: 32px;
-}
-
-.navbar-default .navbar-brand:hover {
-	color: #FFFFFF;
+=======
+	color: #d5641c;
+	font-size: 30px;
+>>>>>>> parent of b3720ec... Revamped the style of the website
 }
 
 .navbar-default .navbar-nav > li > a {
 	font-family: Arial, Helvetica, sans-serif;
+<<<<<<< HEAD
 	font-size: 17px;
+=======
+	font-size: 14px;
+>>>>>>> parent of b3720ec... Revamped the style of the website
 	font-weight: bold;
 	color: #019285;
 }
 
+<<<<<<< HEAD
 .navbar-default .navbar-nav > li > a:hover { 
 	color: #FFFFFF; 
 }
@@ -38,6 +42,8 @@ body {
 	font-size: 17px;
 }
 
+=======
+>>>>>>> parent of b3720ec... Revamped the style of the website
 .center {
 	text-align: center;
 }
@@ -65,14 +71,12 @@ body {
 
 .jumbotron {
 	background-image: url('https://dl.dropboxusercontent.com/s/nn5tufvjg0yppvg/jumbotron.jpg?dl=0');
-	background-size: 2000px 900px;
-
 	h1, h2 {
-		font-family: 'Lobster', cursive;
-		color: navajowhite;
-		padding-left: 60px;
+		font-family: guardian-egyptt, georgia, serif;
+		color: #019285;
 	}
 }
+<<<<<<< HEAD
 
 .btn-lg {
 	font-size: 25px;
@@ -235,3 +239,5 @@ body {
 	}
 }
 
+=======
+>>>>>>> parent of b3720ec... Revamped the style of the website
