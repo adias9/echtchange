@@ -10,7 +10,8 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all.order("created_at DESC")
+    @listings = Listing.all.order("price DESC")
+    #@listings = Listing.all.order("created_at DESC")
   end
 
   # GET /listings/1
@@ -33,7 +34,9 @@ class ListingsController < ApplicationController
     @listing = Listing.new(listing_params)
     @listing.user_id = current_user.id
 
-    if current_user.recipient.blank?
+
+  #SHOULD I HAVE THIS IF STATEMENT?
+    #if current_user.recipient.blank?
       Stripe.api_key = ENV["stripe_api_key"]
       token = params[:stripeToken]
 
@@ -42,10 +45,10 @@ class ListingsController < ApplicationController
         :type => "individual",
         :bank_account => token
         )
-    end
 
-    current_user.recipient = recipient.id
-    current_user.save
+      current_user.recipient = recipient.id
+      current_user.save
+    #end
 
     respond_to do |format|
       if @listing.save

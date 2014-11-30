@@ -1,9 +1,24 @@
+<style>
+.navbar-default {
+  border-width: 0px;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+</style>
+
 <div class="jumbotron">
-  <h1>Handcrafted Items from around the World</h1>
-  <h2>Discover one-of-a-kind items</h2>
+  <h1>Buy and Sell Textbooks</h1>
+  <h2>Your source for trading textbooks in Princeton</h2>
 </div>
 
-<div class="center">
+<div class="col-md-2 left">
+  <ul class="nav nav-pills nav-stacked">
+    <li><%= link_to "Get Started", pages_getstarted_path %></li>
+    <li><%= link_to "Contact", pages_contact_path %></li>
+  </ul>
+</div>
+
+<div class="col-md-10">
   <div class="row">
     <% @listings.each do |listing| %>
       <div class="col-md-3">
@@ -21,7 +36,3 @@
 </div>
 
 <br>
-
-<% if (user_signed_in?) %>
-  <%= link_to 'New Listing', new_listing_path, class: "btn btn-link", data: { no_turbolink: true } %>
-<% end %>

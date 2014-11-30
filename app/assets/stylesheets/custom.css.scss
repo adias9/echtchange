@@ -1,65 +1,47 @@
 @import "bootstrap";
+@import "font-awesome";
+@import url(http://fonts.googleapis.com/css?family=Lobster);
 
 body {
-	background-color: #F5F5F1;
+	background-color: #ECF0F1;
 	color: #333333;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial;
 }
 
 .navbar-default {
-	background-color: #EFEFEB;
+	border-width: 0px;
+  	border-radius: 0px;
+	background-color: #2C3E50;
 }
 
 .navbar-default .navbar-brand {
-	font-family: guardian-egyptt, georgia, serif;
+	font-family: 'Lobster', cursive;
 	font-weight: 400;
-<<<<<<< HEAD
 	color: #FFFFFF;
-<<<<<<< HEAD
 	font-size: 32px;
-=======
-	color: #d5641c;
-	font-size: 30px;
->>>>>>> parent of b3720ec... Revamped the style of the website
 }
 
 .navbar-default .navbar-nav > li > a {
-	font-family: Arial, Helvetica, sans-serif;
-<<<<<<< HEAD
+	font-family: Arial;
 	font-size: 17px;
-=======
-	font-size: 14px;
->>>>>>> parent of b3720ec... Revamped the style of the website
-=======
-	font-size: 30px;
+	font-weight: bold;
+	color: #019285;
 }
 
 .navbar-default .navbar-brand:hover {
 	color: #FFFFFF;
 }
 
-.navbar-default .navbar-nav > li > a {
-	font-family: 'Lobster', cursive;
-	font-size: 14px;
->>>>>>> parent of 2bece00... Small style changes on the website
-	font-weight: bold;
-	color: #019285;
-}
-
-<<<<<<< HEAD
 .navbar-default .navbar-nav > li > a:hover { 
 	color: #FFFFFF; 
 }
 
-<<<<<<< HEAD
 .nav-pills > li > a {
+	font-family: Arial;
+	font-weight: bold;
 	font-size: 17px;
 }
 
-=======
->>>>>>> parent of b3720ec... Revamped the style of the website
-=======
->>>>>>> parent of 2bece00... Small style changes on the website
 .center {
 	text-align: center;
 }
@@ -87,12 +69,15 @@ body {
 
 .jumbotron {
 	background-image: url('https://dl.dropboxusercontent.com/s/nn5tufvjg0yppvg/jumbotron.jpg?dl=0');
+	background-size: 1920px 700px;
+	padding-top: 100px;
+	padding-bottom: 100px;
 	h1, h2 {
-		font-family: guardian-egyptt, georgia, serif;
-		color: #019285;
+		font-family: 'Lobster', cursive;
+		color: white;
+		padding-left: 60px;
 	}
 }
-<<<<<<< HEAD
 
 .btn-lg {
 	font-size: 25px;
@@ -110,7 +95,7 @@ body {
 #how-to p {
 	color: #FFFFFF;
 	font-size: 25px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial;
 }
 
 #why-us {
@@ -120,7 +105,7 @@ body {
 
 #why-us p {
 	color: #FFFFFF;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: Arial;
 	font-size: 25px;
 }
 
@@ -254,6 +239,3 @@ body {
 		border-radius: 10px;
 	}
 }
-
-=======
->>>>>>> parent of b3720ec... Revamped the style of the website
