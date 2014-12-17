@@ -26,8 +26,9 @@
           <%= link_to image_tag(listing.image.url), listing %>
           <div class="caption">
             <h3><%= listing.name %></h3>
+            <h3><%= "#{listing.subject} #{listing.number}" %></h3>
+            <p><%= "Condition - #{listing.condition}" %></p>
             <p><%= number_to_currency(listing.price) %></p>
-            <p><%= "Sold by #{listing.user.name}" %></p>
           </div>
         </div>
       </div>

@@ -5,7 +5,8 @@
     <tr>
       <th class="center">Image</th>
       <th class="center">Name</th>
-      <th class="center">Description</th>
+      <th class="center">Subject - Number</th>
+      <th class="center">Condition - Description</th>
       <th class="center">Price</th>
       <th class="center">Action</th>
     </tr>
@@ -14,7 +15,8 @@
       <tr>
         <td><%= image_tag listing.image.url(:thumb) %></td>
         <td><%= listing.name %></td>
-        <td><%= listing.description %></td>
+        <td><%= "#{listing.subject} - #{listing.number}" %></td>
+        <td><%= "#{listing.condition} - #{listing.description}" %></td>
         <td><%= number_to_currency(listing.price) %></td>
         <td>
           <div class="btn-group">

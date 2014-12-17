@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121163344) do
+ActiveRecord::Schema.define(version: 20141217051115) do
 
   create_table "listings", force: true do |t|
     t.string   "name"
-    t.text     "description"
     t.decimal  "price"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -24,6 +23,10 @@ ActiveRecord::Schema.define(version: 20141121163344) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "user_id"
+    t.string   "subject"
+    t.string   "condition"
+    t.integer  "number"
+    t.text     "description"
   end
 
   create_table "orders", force: true do |t|

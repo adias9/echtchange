@@ -20,6 +20,19 @@
     <%= f.label :name %>
     <%= f.text_field :name, class: "form-control" %>
   </div>
+
+  <div class="form-group col-md-6">
+    <%= f.label :subject %>
+    <%= f.select(:subject, [['AAS'], ['AFS'], ['AMS'], ['ANT'], ['AOS'], ['APC'], ['ARA'], ['ARC'], ['ART'], ['AST'], ['ATL'], ['BCS'], ['CBE'], ['CEE'], ['CHI'], ['CHM'], ['CHV'], ['CLA'], ['CLG'], ['COM'], ['COS'], ['CWR'], ['CZE'], ['DAN'], ['EAP'], ['EAS'], ['ECO'], ['ECS'], ['EEB'], ['EGR'], ['ELE'], ['ENE'], ['ENG'], ['ENV'], ['EPS'], ['FIN'], ['FRE'], ['FRS'], ['GEO'], ['GER'], ['GHP'], ['GLS'], ['GSS'], ['HEB'], ['HIN'], ['HIS'], ['HLS'], ['HOS'], ['HUM'], ['ISC'], ['ITA'], ['JDS'], ['JPN'], ['JRN'], ['KOR'], ['LAO'], ['LAS'], ['LAT'], ['LIN'], ['MAE'], ['MAT'], ['MED'], ['MOD'], ['MOG'], ['MOL'], ['MSE'], ['MUS'], ['NES'], ['NEU'], ['ORF'], ['PAW'], ['PER'], ['PHI'], ['PHY'], ['PLS'], ['POL'], ['POP'], ['POR'], ['PSY'], ['QCB'], ['REL'], ['RES'], ['RUS'], ['SAS'], ['SLA'], ['SML'], ['SOC'], ['SPA'], ['STC'], ['SWA'], ['THR'], ['TPP'], ['TRA'], ['TUR'], ['TWI'], ['URB'], ['URD'], ['VIS'], ['WRI'], ['WWS']], {}, {class: "form-control"}) %>
+  </div>
+  <div class="form-group col-md-6">
+    <%= f.label :number %>
+    <%= f.text_field :number, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :condition %>
+    <%= f.text_field :condition, class: "form-control" %>
+  </div>
   <div class="form-group">
     <%= f.label :description %>
     <%= f.text_area :description, class: "form-control" %>
