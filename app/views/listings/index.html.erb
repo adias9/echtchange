@@ -11,27 +11,45 @@
   <h2>Your source for trading textbooks in Princeton</h2>
 </div>
 
-<div class="col-md-2 left">
-  <ul class="nav nav-pills nav-stacked">
+<div id="indexlist" class="col-xs-5 col-sm-3 col-md-2 left">
+  <ul class="nav nav-pills nav-stacked"> 
+  <!--<ul class="nav nav-list"> -->
     <li><%= link_to "Get Started", pages_getstarted_path %></li>
     <li><%= link_to "Contact", pages_contact_path %></li>
+
+
+    <div id="coursesubjectbutton" class="btn-group">
+      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+        Course Subject <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><%= link_to "All", root_path %></li>
+        <li class="divider"></li>
+        <li><%= link_to "AAS", root_path(:subject => "AAS") %></li>
+        <li><%= link_to "CHM", root_path(:subject => "CHM") %></li>
+        <li><%= link_to "CHM", root_path(:subject => "CHM") %></li>
+        <li><%= link_to "CHM", root_path(:subject => "CHM") %></li>
+      </ul>
+    </div>
   </ul>
 </div>
 
-<div class="col-md-10">
+<br>
+
+<div id="listingdisplay" class="col-xs-6 col-sm-9 col-md-10">
   <div class="row">
     <% @listings.each do |listing| %>
-      <div class="col-md-3">
-        <div class="thumbnail">
-          <%= link_to image_tag(listing.image.url), listing %>
-          <div class="caption">
-            <h3><%= listing.name %></h3>
-            <h3><%= "#{listing.subject} #{listing.number}" %></h3>
-            <p><%= "Condition - #{listing.condition}" %></p>
-            <p><%= number_to_currency(listing.price) %></p>
+        <div class="col-xs-6 col-sm-4 col-md-3">
+          <div class="thumbnail">
+            <%= link_to image_tag(listing.image.url), listing %>
+            <div class="caption">
+              <h3><%= listing.name %></h3>
+              <h3><%= "#{listing.subject} #{listing.number}" %></h3>
+              <p><%= "Condition - #{listing.condition}" %></p>
+              <p><%= number_to_currency(listing.price) %></p>
+            </div>
           </div>
         </div>
-      </div>
     <% end %>
   </div>
 </div>

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'seller' => 'listings#seller'
   get 'sales' => 'orders#sales'
   get 'purchases' => 'orders#purchases'
+  #get 'listing/index/:subject' => 'listings#index', :as => :listing_subject
 
   root 'listings#index'
 

@@ -10,7 +10,12 @@ class ListingsController < ApplicationController
   # GET /listings
   # GET /listings.json
   def index
-    @listings = Listing.all.order("price DESC")
+    if params[:subject]
+      @listings = Listing.where(subject: params[:subject])
+    else
+      @listings = Listing.all.order("price DESC")
+    end
+    #@listings = Listing.all.order("price DESC")
     #@listings = Listing.all.order("created_at DESC")
   end
 
