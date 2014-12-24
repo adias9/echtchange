@@ -1,7 +1,10 @@
 class PagesController < ApplicationController
-  def about
+  def getstarted
   end
 
   def contact
+  end
+
+  def categorization
   end
 end
