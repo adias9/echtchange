@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-  before_action :set_listing, only: [:show, :edit, :update, :destroy]
+  before_action :set_listing, only: [:show, :edit, :update]
   before_action :authenticate_user!, only: [:seller, :new, :create, :edit, :update, :destroy]
   before_action :check_user, only: [:edit, :update, :destroy]
 
@@ -37,6 +37,7 @@ class ListingsController < ApplicationController
   # POST /listings.json
   def create
     @listing = Listing.new(listing_params)
+    @listing.sold = false
     @listing.user_id = current_user.id
 
 
@@ -50,10 +51,11 @@ class ListingsController < ApplicationController
         :type => "individual",
         :bank_account => token
         )
+    #end
 
       current_user.recipient = recipient.id
       current_user.save
-    #end
+
 
     respond_to do |format|
       if @listing.save
@@ -98,7 +100,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:name, :subject, :number, :condition, :description, :price, :image)
+      params.require(:listing).permit(:name, :subject, :number, :condition, :description, :price, :image, :sold)
     end
 
     def check_user

@@ -1,4 +1,4 @@
-<nav class="navbar yamm navbar-default" role="navigation">
+<nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -13,129 +13,129 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
+      <ul class="nav yamm navbar-nav">
         <li><%= link_to "Get Started", pages_getstarted_path %></li>
         <li><%= link_to "Contact", pages_contact_path %></li>
         <li class="dropdown">  
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Course Subject<span class="caret"></span></a>  
+          <a class="dropdown-toggle" data-toggle="dropdown">Course Subject<span class="caret"></span></a>  
           <ul class="dropdown-menu">  
             <li>  
               <div class="yamm-content">  
-                  <div class="row">   
-                    <ul class="col-sm-2 list-unstyled">
-                      <li><%= link_to "All", root_path %></li>
-                      <li><%= link_to "AAS", root_path(:subject => "AAS") %></li>
-                      <li><%= link_to "AFS", root_path(:subject => "AFS") %></li>
-                      <li><%= link_to "AMS", root_path(:subject => "AMS") %></li>
-                      <li><%= link_to "ANT", root_path(:subject => "ANT") %></li>
-                      <li><%= link_to "AOS", root_path(:subject => "AOS") %></li>
-                      <li><%= link_to "APC", root_path(:subject => "APC") %></li>
-                      <li><%= link_to "ARA", root_path(:subject => "ARA") %></li>
-                      <li><%= link_to "ARC", root_path(:subject => "ARC") %></li>
-                      <li><%= link_to "ART", root_path(:subject => "ART") %></li>
-                      <li><%= link_to "AST", root_path(:subject => "AST") %></li>
-                      <li><%= link_to "ATL", root_path(:subject => "ATL") %></li>
-                      <li><%= link_to "BCS", root_path(:subject => "BCS") %></li>
-                      <li><%= link_to "CBE", root_path(:subject => "CBE") %></li>
-                      <li><%= link_to "CEE", root_path(:subject => "CEE") %></li>
-                      <li><%= link_to "CHI", root_path(:subject => "CHI") %></li>
-                      <li><%= link_to "CHM", root_path(:subject => "CHM") %></li>
-                    </ul>
-                    <ul class="col-sm-2 list-unstyled">
-                      <li><%= link_to "CHV", root_path(:subject => "CHV") %></li>
-                      <li><%= link_to "CLA", root_path(:subject => "CLA") %></li>
-                      <li><%= link_to "CLG", root_path(:subject => "CLG") %></li>
-                      <li><%= link_to "COM", root_path(:subject => "COM") %></li>
-                      <li><%= link_to "COS", root_path(:subject => "COS") %></li>
-                      <li><%= link_to "CWR", root_path(:subject => "CWR") %></li>
-                      <li><%= link_to "CZE", root_path(:subject => "CZE") %></li>
-                      <li><%= link_to "DAN", root_path(:subject => "DAN") %></li>
-                      <li><%= link_to "EAP", root_path(:subject => "EAP") %></li>
-                      <li><%= link_to "EAS", root_path(:subject => "EAS") %></li>
-                      <li><%= link_to "ECO", root_path(:subject => "ECO") %></li>
-                      <li><%= link_to "ECS", root_path(:subject => "ECS") %></li>
-                      <li><%= link_to "EEB", root_path(:subject => "EEB") %></li>
-                      <li><%= link_to "EGR", root_path(:subject => "EGR") %></li>
-                      <li><%= link_to "ELE", root_path(:subject => "ELE") %></li>
-                      <li><%= link_to "ENE", root_path(:subject => "ENE") %></li>
-                      <li><%= link_to "ENG", root_path(:subject => "ENG") %></li>
-                    </ul>
-                    <ul class="col-sm-2 list-unstyled">
-                      <li><%= link_to "ENV", root_path(:subject => "ENV") %></li>
-                      <li><%= link_to "EPS", root_path(:subject => "EPS") %></li>
-                      <li><%= link_to "FIN", root_path(:subject => "FIN") %></li>
-                      <li><%= link_to "FRE", root_path(:subject => "FRE") %></li>
-                      <li><%= link_to "FRS", root_path(:subject => "FRS") %></li>
-                      <li><%= link_to "GEO", root_path(:subject => "GEO") %></li>
-                      <li><%= link_to "GER", root_path(:subject => "GER") %></li>
-                      <li><%= link_to "GHP", root_path(:subject => "GHP") %></li>
-                      <li><%= link_to "GLS", root_path(:subject => "GLS") %></li>
-                      <li><%= link_to "GSS", root_path(:subject => "GSS") %></li>
-                      <li><%= link_to "HEB", root_path(:subject => "HEB") %></li>
-                      <li><%= link_to "HIN", root_path(:subject => "HIN") %></li>
-                      <li><%= link_to "HIS", root_path(:subject => "HIS") %></li>
-                      <li><%= link_to "HLS", root_path(:subject => "HLS") %></li>
-                      <li><%= link_to "HOS", root_path(:subject => "HOS") %></li>
-                      <li><%= link_to "HUM", root_path(:subject => "HUM") %></li>
-                      <li><%= link_to "ISC", root_path(:subject => "ISC") %></li>
-                    </ul>
-                    <ul class="col-sm-2 list-unstyled">
-                      <li><%= link_to "ITA", root_path(:subject => "ITA") %></li>
-                      <li><%= link_to "JDS", root_path(:subject => "JDS") %></li>
-                      <li><%= link_to "JPN", root_path(:subject => "JPN") %></li>
-                      <li><%= link_to "JRN", root_path(:subject => "JRN") %></li>
-                      <li><%= link_to "KOR", root_path(:subject => "KOR") %></li>
-                      <li><%= link_to "LAO", root_path(:subject => "LAO") %></li>
-                      <li><%= link_to "LAS", root_path(:subject => "LAS") %></li>
-                      <li><%= link_to "LAT", root_path(:subject => "LAT") %></li>
-                      <li><%= link_to "LIN", root_path(:subject => "LIN") %></li>
-                      <li><%= link_to "MAE", root_path(:subject => "MAE") %></li>
-                      <li><%= link_to "MAT", root_path(:subject => "MAT") %></li>
-                      <li><%= link_to "MED", root_path(:subject => "MED") %></li>
-                      <li><%= link_to "MOD", root_path(:subject => "MOD") %></li>
-                      <li><%= link_to "MOG", root_path(:subject => "MOG") %></li>
-                      <li><%= link_to "MOL", root_path(:subject => "MOL") %></li>
-                      <li><%= link_to "MSE", root_path(:subject => "MSE") %></li>
-                      <li><%= link_to "MUS", root_path(:subject => "MUS") %></li>
-                    </ul>
-                    <ul class="col-sm-2 list-unstyled">
-                      <li><%= link_to "NES", root_path(:subject => "NES") %></li>
-                      <li><%= link_to "NEU", root_path(:subject => "NEU") %></li>
-                      <li><%= link_to "ORF", root_path(:subject => "ORF") %></li>
-                      <li><%= link_to "PAW", root_path(:subject => "PAW") %></li>
-                      <li><%= link_to "PER", root_path(:subject => "PER") %></li>
-                      <li><%= link_to "PHI", root_path(:subject => "PHI") %></li>
-                      <li><%= link_to "PHY", root_path(:subject => "PHY") %></li>
-                      <li><%= link_to "PLS", root_path(:subject => "PLS") %></li>
-                      <li><%= link_to "POL", root_path(:subject => "POL") %></li>
-                      <li><%= link_to "POP", root_path(:subject => "POP") %></li>
-                      <li><%= link_to "POR", root_path(:subject => "POR") %></li>
-                      <li><%= link_to "PSY", root_path(:subject => "PSY") %></li>
-                      <li><%= link_to "QCB", root_path(:subject => "QCB") %></li>
-                      <li><%= link_to "REL", root_path(:subject => "REL") %></li>
-                      <li><%= link_to "RES", root_path(:subject => "RES") %></li>
-                      <li><%= link_to "RUS", root_path(:subject => "RUS") %></li>
-                      <li><%= link_to "SAS", root_path(:subject => "SAS") %></li>
-                    </ul>
-                    <ul class="col-sm-2 list-unstyled">
-                      <li><%= link_to "SLA", root_path(:subject => "SLA") %></li>
-                      <li><%= link_to "SML", root_path(:subject => "SML") %></li>
-                      <li><%= link_to "SOC", root_path(:subject => "SOC") %></li>
-                      <li><%= link_to "SPA", root_path(:subject => "SPA") %></li>
-                      <li><%= link_to "STC", root_path(:subject => "STC") %></li>
-                      <li><%= link_to "SWA", root_path(:subject => "SWA") %></li>
-                      <li><%= link_to "THR", root_path(:subject => "THR") %></li>
-                      <li><%= link_to "TPP", root_path(:subject => "TPP") %></li>
-                      <li><%= link_to "TRA", root_path(:subject => "TRA") %></li>
-                      <li><%= link_to "TUR", root_path(:subject => "TUR") %></li>
-                      <li><%= link_to "TWI", root_path(:subject => "TWI") %></li>
-                      <li><%= link_to "URB", root_path(:subject => "URB") %></li>
-                      <li><%= link_to "URD", root_path(:subject => "URD") %></li>
-                      <li><%= link_to "VIS", root_path(:subject => "VIS") %></li>
-                      <li><%= link_to "WRI", root_path(:subject => "WRI") %></li>
-                      <li><%= link_to "WWS", root_path(:subject => "WWS") %></li>
-                    </ul>
-                  </div>  
+                <div class="row">   
+                  <ul class="col-sm-2 list-unstyled">
+                    <li><%= link_to "All", root_path %></li>
+                    <li><%= link_to "AAS", root_path(:subject => "AAS") %></li>
+                    <li><%= link_to "AFS", root_path(:subject => "AFS") %></li>
+                    <li><%= link_to "AMS", root_path(:subject => "AMS") %></li>
+                    <li><%= link_to "ANT", root_path(:subject => "ANT") %></li>
+                    <li><%= link_to "AOS", root_path(:subject => "AOS") %></li>
+                    <li><%= link_to "APC", root_path(:subject => "APC") %></li>
+                    <li><%= link_to "ARA", root_path(:subject => "ARA") %></li>
+                    <li><%= link_to "ARC", root_path(:subject => "ARC") %></li>
+                    <li><%= link_to "ART", root_path(:subject => "ART") %></li>
+                    <li><%= link_to "AST", root_path(:subject => "AST") %></li>
+                    <li><%= link_to "ATL", root_path(:subject => "ATL") %></li>
+                    <li><%= link_to "BCS", root_path(:subject => "BCS") %></li>
+                    <li><%= link_to "CBE", root_path(:subject => "CBE") %></li>
+                    <li><%= link_to "CEE", root_path(:subject => "CEE") %></li>
+                    <li><%= link_to "CHI", root_path(:subject => "CHI") %></li>
+                    <li><%= link_to "CHM", root_path(:subject => "CHM") %></li>
+                  </ul>
+                  <ul class="col-sm-2 list-unstyled">
+                    <li><%= link_to "CHV", root_path(:subject => "CHV") %></li>
+                    <li><%= link_to "CLA", root_path(:subject => "CLA") %></li>
+                    <li><%= link_to "CLG", root_path(:subject => "CLG") %></li>
+                    <li><%= link_to "COM", root_path(:subject => "COM") %></li>
+                    <li><%= link_to "COS", root_path(:subject => "COS") %></li>
+                    <li><%= link_to "CWR", root_path(:subject => "CWR") %></li>
+                    <li><%= link_to "CZE", root_path(:subject => "CZE") %></li>
+                    <li><%= link_to "DAN", root_path(:subject => "DAN") %></li>
+                    <li><%= link_to "EAP", root_path(:subject => "EAP") %></li>
+                    <li><%= link_to "EAS", root_path(:subject => "EAS") %></li>
+                    <li><%= link_to "ECO", root_path(:subject => "ECO") %></li>
+                    <li><%= link_to "ECS", root_path(:subject => "ECS") %></li>
+                    <li><%= link_to "EEB", root_path(:subject => "EEB") %></li>
+                    <li><%= link_to "EGR", root_path(:subject => "EGR") %></li>
+                    <li><%= link_to "ELE", root_path(:subject => "ELE") %></li>
+                    <li><%= link_to "ENE", root_path(:subject => "ENE") %></li>
+                    <li><%= link_to "ENG", root_path(:subject => "ENG") %></li>
+                  </ul>
+                  <ul class="col-sm-2 list-unstyled">
+                    <li><%= link_to "ENV", root_path(:subject => "ENV") %></li>
+                    <li><%= link_to "EPS", root_path(:subject => "EPS") %></li>
+                    <li><%= link_to "FIN", root_path(:subject => "FIN") %></li>
+                    <li><%= link_to "FRE", root_path(:subject => "FRE") %></li>
+                    <li><%= link_to "FRS", root_path(:subject => "FRS") %></li>
+                    <li><%= link_to "GEO", root_path(:subject => "GEO") %></li>
+                    <li><%= link_to "GER", root_path(:subject => "GER") %></li>
+                    <li><%= link_to "GHP", root_path(:subject => "GHP") %></li>
+                    <li><%= link_to "GLS", root_path(:subject => "GLS") %></li>
+                    <li><%= link_to "GSS", root_path(:subject => "GSS") %></li>
+                    <li><%= link_to "HEB", root_path(:subject => "HEB") %></li>
+                    <li><%= link_to "HIN", root_path(:subject => "HIN") %></li>
+                    <li><%= link_to "HIS", root_path(:subject => "HIS") %></li>
+                    <li><%= link_to "HLS", root_path(:subject => "HLS") %></li>
+                    <li><%= link_to "HOS", root_path(:subject => "HOS") %></li>
+                    <li><%= link_to "HUM", root_path(:subject => "HUM") %></li>
+                    <li><%= link_to "ISC", root_path(:subject => "ISC") %></li>
+                  </ul>
+                  <ul class="col-sm-2 list-unstyled">
+                    <li><%= link_to "ITA", root_path(:subject => "ITA") %></li>
+                    <li><%= link_to "JDS", root_path(:subject => "JDS") %></li>
+                    <li><%= link_to "JPN", root_path(:subject => "JPN") %></li>
+                    <li><%= link_to "JRN", root_path(:subject => "JRN") %></li>
+                    <li><%= link_to "KOR", root_path(:subject => "KOR") %></li>
+                    <li><%= link_to "LAO", root_path(:subject => "LAO") %></li>
+                    <li><%= link_to "LAS", root_path(:subject => "LAS") %></li>
+                    <li><%= link_to "LAT", root_path(:subject => "LAT") %></li>
+                    <li><%= link_to "LIN", root_path(:subject => "LIN") %></li>
+                    <li><%= link_to "MAE", root_path(:subject => "MAE") %></li>
+                    <li><%= link_to "MAT", root_path(:subject => "MAT") %></li>
+                    <li><%= link_to "MED", root_path(:subject => "MED") %></li>
+                    <li><%= link_to "MOD", root_path(:subject => "MOD") %></li>
+                    <li><%= link_to "MOG", root_path(:subject => "MOG") %></li>
+                    <li><%= link_to "MOL", root_path(:subject => "MOL") %></li>
+                    <li><%= link_to "MSE", root_path(:subject => "MSE") %></li>
+                    <li><%= link_to "MUS", root_path(:subject => "MUS") %></li>
+                  </ul>
+                  <ul class="col-sm-2 list-unstyled">
+                    <li><%= link_to "NES", root_path(:subject => "NES") %></li>
+                    <li><%= link_to "NEU", root_path(:subject => "NEU") %></li>
+                    <li><%= link_to "ORF", root_path(:subject => "ORF") %></li>
+                    <li><%= link_to "PAW", root_path(:subject => "PAW") %></li>
+                    <li><%= link_to "PER", root_path(:subject => "PER") %></li>
+                    <li><%= link_to "PHI", root_path(:subject => "PHI") %></li>
+                    <li><%= link_to "PHY", root_path(:subject => "PHY") %></li>
+                    <li><%= link_to "PLS", root_path(:subject => "PLS") %></li>
+                    <li><%= link_to "POL", root_path(:subject => "POL") %></li>
+                    <li><%= link_to "POP", root_path(:subject => "POP") %></li>
+                    <li><%= link_to "POR", root_path(:subject => "POR") %></li>
+                    <li><%= link_to "PSY", root_path(:subject => "PSY") %></li>
+                    <li><%= link_to "QCB", root_path(:subject => "QCB") %></li>
+                    <li><%= link_to "REL", root_path(:subject => "REL") %></li>
+                    <li><%= link_to "RES", root_path(:subject => "RES") %></li>
+                    <li><%= link_to "RUS", root_path(:subject => "RUS") %></li>
+                    <li><%= link_to "SAS", root_path(:subject => "SAS") %></li>
+                  </ul>
+                  <ul class="col-sm-2 list-unstyled">
+                    <li><%= link_to "SLA", root_path(:subject => "SLA") %></li>
+                    <li><%= link_to "SML", root_path(:subject => "SML") %></li>
+                    <li><%= link_to "SOC", root_path(:subject => "SOC") %></li>
+                    <li><%= link_to "SPA", root_path(:subject => "SPA") %></li>
+                    <li><%= link_to "STC", root_path(:subject => "STC") %></li>
+                    <li><%= link_to "SWA", root_path(:subject => "SWA") %></li>
+                    <li><%= link_to "THR", root_path(:subject => "THR") %></li>
+                    <li><%= link_to "TPP", root_path(:subject => "TPP") %></li>
+                    <li><%= link_to "TRA", root_path(:subject => "TRA") %></li>
+                    <li><%= link_to "TUR", root_path(:subject => "TUR") %></li>
+                    <li><%= link_to "TWI", root_path(:subject => "TWI") %></li>
+                    <li><%= link_to "URB", root_path(:subject => "URB") %></li>
+                    <li><%= link_to "URD", root_path(:subject => "URD") %></li>
+                    <li><%= link_to "VIS", root_path(:subject => "VIS") %></li>
+                    <li><%= link_to "WRI", root_path(:subject => "WRI") %></li>
+                    <li><%= link_to "WWS", root_path(:subject => "WWS") %></li>
+                  </ul>
+                </div>  
               </div>  
             </li>  
           </ul>  
@@ -144,7 +144,7 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Seller Account <span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Seller Account <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li><%= link_to 'Create New Listing', new_listing_path, data: { no_turbolink: true } %></li>
               <li><%= link_to "Manage Listings", seller_path %></li>

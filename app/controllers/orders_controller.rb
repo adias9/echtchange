@@ -49,6 +49,7 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       if @order.save
+        Listing.update(params[:listing_id], sold: true)
         format.html { redirect_to root_url }
         format.json { render action: 'show', status: :created, location: @order }
       else

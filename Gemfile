@@ -16,7 +16,6 @@ gem "figaro"
 gem 'devise'
 gem 'stripe'
 gem "font-awesome-rails"
-gem 'awesome_nested_set'
 
 gem 'pg',		group: :production 
 gem 'rails_12factor',		group: :production 
