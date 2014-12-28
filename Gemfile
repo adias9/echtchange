@@ -20,7 +20,7 @@ gem "font-awesome-rails"
 gem 'pg',		group: :production 
 gem 'rails_12factor',		group: :production 
 
-gem 'sqlite3',		group: [:development, :test] 
+#gem 'sqlite3',		group: [:development, :test] 
 
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
