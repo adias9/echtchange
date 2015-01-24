@@ -54,24 +54,6 @@
     <%= f.file_field :image, class: "form-control" %>
   </div>
 
-  <% if current_user.recipient.blank? || (request.fullpath != "/listings/new") %>
-    <br>
-    <h1 class="col-md-12">Bank Account Information</h1>
-
-    <div class="form-group col-md-2">
-      <%= label_tag :country, "*Country (e.g. US)" %>
-      <%= text_field_tag :country, nil, { :name => nil, :'data-stripe' => "country", class: "form-control" } %>
-    </div>
-    <div class="form-group col-md-5">
-      <%= label_tag :routing_number, "*Routing Number" %>
-      <%= text_field_tag :routing_number, nil, { :name => nil, :'data-stripe' => "routingNumber", class: "form-control" } %>
-    </div>
-    <div class="form-group col-md-7">
-      <%= label_tag :account_number, "*Account Number" %>
-      <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class: "form-control" } %>
-    </div>
-  <% end %>
-
   <div class="form-group col-md-12 left">
     <%= f.submit class: "btn btn-primary" %>
   </div>
