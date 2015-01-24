@@ -41,8 +41,8 @@ class ListingsController < ApplicationController
     @listing.user_id = current_user.id
 
 
-  #SHOULD I HAVE THIS IF STATEMENT?
-    #if current_user.recipient.blank?
+    #SHOULD I HAVE THIS IF STATEMENT?
+    if current_user.recipient.blank?
       Stripe.api_key = ENV["stripe_api_key"]
       token = params[:stripeToken]
 
@@ -51,10 +51,10 @@ class ListingsController < ApplicationController
         :type => "individual",
         :bank_account => token
         )
-    #end
-
+    
       current_user.recipient = recipient.id
       current_user.save
+    end
 
 
     respond_to do |format|

@@ -54,6 +54,7 @@
     <%= f.file_field :image, class: "form-control" %>
   </div>
 
+  <% if current_user.recipient.blank? || (request.fullpath != "/listings/new") %>
     <br>
     <h1 class="col-md-12">Bank Account Information</h1>
 
@@ -69,6 +70,7 @@
       <%= label_tag :account_number, "*Account Number" %>
       <%= text_field_tag :account_number, nil, { :name => nil, :'data-stripe' => "accountNumber", class: "form-control" } %>
     </div>
+  <% end %>
 
   <div class="form-group col-md-12 left">
     <%= f.submit class: "btn btn-primary" %>
