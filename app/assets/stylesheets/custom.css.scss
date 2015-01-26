@@ -112,7 +112,9 @@ body {
 
 #how-to {
 	background-color: #303233;
-	font-family: 'Lobster', cursive;
+	h2 {
+		font-family: 'Lobster', cursive;
+	}
 }
 
 #how-to .fa-stack {

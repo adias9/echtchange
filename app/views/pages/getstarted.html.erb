@@ -10,10 +10,9 @@
       <h2>How Do I Get Started?</h2>
       <hr>
       <% if user_signed_in? %>
-        <p>You're signed in so now all you need to do is click on which textbook you'd like to purchase or if you would like to sell a textbook click "Create New Listing" under the "Seller Account" dropdown button in the navigation bar at the top.</p>
+        <p>You're signed in! Check out the info below on how Echtchange works!</p>
       <% else %>
-        <p>You can check out all of the books currenty for sale without having an account, but if you're itching to get in on the action and start buying some of the books or even selling your own books click the link below to sign up!</p>
-        <br>
+        <p>Check out the info below on how Echtchange works! If you'd like to begin buying and/or selling books, click the link below to sign up with your Princeton email!</p>
         <li><%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-danger btn-lg" %></li>
       <% end %>
       <br>
@@ -30,26 +29,26 @@
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-users fa-stack-1x fa-inverse"></i>
+            <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
           </span>
-          <h3>Local</h3>
-          <p>You know what's cool about trading local? You can  and check out the item in person that same day. We're focused on creating solutions that create local trade communities.</p>
+          <h3>Browse</h3>
+          <p>Quickly search for your book by Course Subject from the navbar and find the best deals on your books. All without having to make an account!</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+            <i class="fa fa-users fa-stack-1x fa-inverse"></i>
           </span>
-          <h3>Easy</h3>
-          <p>Our process is easy and quick so you can get to listing and buying.</p>
+          <h3>Buy</h3>
+          <p>Buy your book on our site, recieve an email when it has arrived and pick it up from an Echtchange representative in Frist. It's that easy!</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-money fa-stack-1x fa-inverse"></i>
           </span>
-          <h3>Garage Sale</h3>
-          <p>Who doesn't love the fun of heading to a Garage Sale or Flea Market on the weekends and seeing what cool stuff you can find or snagging that "thing" you'r missing for a great price.</p>
+          <h3>Sell</h3>
+          <p>Post your book listing on our site, receive an email when it is sold, drop it off with an Echtchange representative in Frist, and immediately receive a Venmo for cash for your sold book.</p>
         </div>
       </div>
     </div> <!-- /container -->

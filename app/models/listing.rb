@@ -12,9 +12,8 @@ class Listing < ActiveRecord::Base
 
 	validates :name, :subject, :number, :condition, :price, presence: true
 	validates :number, numericality: {greater_than: 99, less_than: 1000}
-	validates :price, numericality: {greater_than: 15, less_than: 200}	
+	validates :price, numericality: {greater_than: 1, less_than: 200}	
 	validates_attachment_presence :image
-
 
 	belongs_to :user	
 	has_many :orders   	
