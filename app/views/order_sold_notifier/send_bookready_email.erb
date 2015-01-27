@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+	    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  	</head>
+  	<body>
+    	<h1>Your book is ready to be picked up, <%= @user.name %>!</h1>
+		<p>Check out your next steps below to pick up your book.</p>
+		<ol type="1">
+  			<li>Grab your Prox.</li>
+  			<li>Print out this email or have it ready on your phone.</li>
+  			<li>Visit Frist Campus Center on the 1st floor and look for a representative at a table with an Echtchange sign anytime from 10am-10pm to pick up your book.</li>
+  			<li>Check out Echtchange to sell some of your old books or see if any of your other books have been posted! </li>
+		</ol>
+
+		<p>Looking forward to seeing you soon!</p>
+
+		<br>
+
+		<h2>Order Information:</h2>
+		<h4>(For use by Echtchange representative)</h4>
+		<ol type="1">
+  			<li><%= "Course: #{@order.listing.subject} #{@order.listing.number}" %></li>
+  			<li><%= "Listing id: #{@order.listing_id}" %></li>
+  			<li><%= "Buyer id: #{@order.buyer_id}" %></li>
+  		</ol>
+		
+	</body>
+</html>

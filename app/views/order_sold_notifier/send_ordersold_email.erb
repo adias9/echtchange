@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+	    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  	</head>
+  	<body>
+    	<h1>Your book has sold, <%= @user.name %>!</h1>
+		<p>Check out your next steps below to drop off your book and receive your payment.</p>
+		<ol type="1">
+  			<li><%= "Grab your #{@order.listing.subject} #{@order.listing.number} book and your Prox." %></li>
+  			<li>Print out this email or have it ready on your phone.</li>
+  			<li>(Optional, but Preferred) Download and Sign up for Venmo on your phone to receive your money if you don't already have it. It's a really quick and easy way to send money!</li>
+  			<li>Visit Frist Campus Center on the 1st floor and look for a representative at a table with an Echtchange sign anytime from 10am-10pm to drop off your book and receive your money.</li>
+  			<li>Check out Echtchange to buy some of your course books with your new earnings or even to post some more! </li>
+		</ol>
+
+		<p>Looking forward to seeing you soon!</p>
+
+		<br>
+
+		<h2>Order Information:</h2>
+		<h4>(For use by Echtchange representative)</h4>
+		<ol type="1">
+  			<li><%= "Course: #{@order.listing.subject} #{@order.listing.number}" %></li>
+  			<li><%= "Listing id: #{@order.listing_id}" %></li>
+  			<li><%= "Buyer id: #{@order.buyer_id}" %></li>
+  		</ol>
+
+	</body>
+</html>
