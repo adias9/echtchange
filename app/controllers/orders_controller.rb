@@ -27,6 +27,15 @@ class OrdersController < ApplicationController
     end
   end
 
+  def undeliver
+    @order = Order.find(params[:id])
+    Listing.update(@order.listing_id, delivered: false)
+
+    respond_to do |format|
+      format.html { redirect_to adminpanel_url, notice: 'Listing marked undelivered.' }
+    end
+  end
+
 ##############################################################################
 
   def sales
