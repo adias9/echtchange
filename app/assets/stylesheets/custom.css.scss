@@ -3,29 +3,31 @@
 @import url(http://fonts.googleapis.com/css?family=Lobster);
 
 body {
-	background-color: #ECF0F1;
-	color: #333333;
-	font-family: Arial;
+	background-color: #C8C8C8;
+	/*#dfd7ca;*/
+	color: #262626;
+	font-family: Avenir Next;
 }
 
 .navbar-default {
 	border-width: 0px;
   	border-radius: 0px;
-	background-color: #2C3E50;
+	background-color: #262626;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
-.navbar-default .navbar-brand {
+/*.navbar-default .navbar-brand {
 	font-family: 'Lobster', cursive;
 	font-weight: 400;
 	color: #FFFFFF;
 	font-size: 32px;
-}
+}*/
 
 .navbar-default .navbar-nav > li > a {
-	font-family: Arial;
-	font-size: 17px;
-	font-weight: bold;
-	color: #019285;
+	font-family: Avenir Next;
+	font-size: 20px;
+	color: #737375;
 }
 
 .navbar-default .navbar-brand:hover {
@@ -45,9 +47,9 @@ body {
 }
 
 .nav-pills > li > a {
-	font-family: Arial;
-	font-weight: bold;
-	font-size: 17px;
+	font-family: Avenir Next;
+	font-size: 20px;
+	color: #737375;
 }
 
 .center {
@@ -81,14 +83,15 @@ body {
 	padding-top: 100px;
 	padding-bottom: 100px;
 	h1, h2 {
-		font-family: 'Lobster', cursive;
-		color: white;
-		padding-left: 60px;
+		font-family: Avenir Next;
+		color: #FFFFFF;
+		font-weight: bold;
+		padding-left: 50px;
 	}
 }
 
 #indexlist {
-	background-color: gainsboro;
+	background-color: #262626;
 	padding-top: 30px;
 	padding-bottom: 40px;
 	top: 20px;
@@ -111,70 +114,55 @@ body {
 }
 
 #how-to {
-	background-color: #303233;
-	h2 {
-		font-family: 'Lobster', cursive;
+	background-color: #262626;
+	h2, h3 {
+		font-family: Avenir Next;
+		font-weight: bold;
 	}
 }
 
 #how-to .fa-stack {
-	color: #2C3E50;
+	color: #737375;
 }
 
 #how-to p {
 	color: #FFFFFF;
 	font-size: 25px;
-	font-family: Arial;
+	font-family: Avenir Next;
 }
 
 #why-us {
-	background-color: #2C3E50;
-	font-family: 'Lobster', cursive;
+	background-color: #737375;
+	font-family: Avenir Next;
+	h2, h3 {
+		color: #262626;
+		font-weight: bold;
+		padding: 0px;
+		font-size: 30px;
+	}
+}
+
+#why-us .fa-stack {
+	color: #262626;
 }
 
 #why-us p {
 	color: #FFFFFF;
-	font-family: Arial;
+	font-family: Avenir Next;
 	font-size: 25px;
 }
 
-.homepage {
-	text-align: center;
-}
-
-.homepage h2, h3 {
-	color: #019285;
+.homepage h2 {
+	color: #5CB85C;
 	padding: 0px;
 	font-size: 30px;
 }
 
-.homepage h2 {
-	padding-top: 10px;
-}
-
 .homepage h3 {
-	margin-top: 10px;
-}
-
-.homepage p {
-	font-size: 21px;
-	font-weight: 300;
-}
-
-.homepage a {
-	color: 	#FFFFFF;
-}
-
-.homepage a:hover {
-	color: #303233;
-	text-decoration: none;
-	opacity: .8;
-}
-
-.homepage hr {
-	border-color: #019285;
-	width: 160px;
-	margin-top: 15px;
+	color: #5CB85C;
+	/*#019285;*/
+	padding: 0px;
+	font-size: 30px;
 }
 
 @media (min-width: 1500px) {
