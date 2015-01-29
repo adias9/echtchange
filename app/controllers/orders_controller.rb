@@ -4,6 +4,31 @@ class OrdersController < ApplicationController
 
   respond_to :html
 
+  def adminpanel
+    @orders = Order.all
+  end
+
+  def sendnotify
+    @order = Order.find(params[:id])
+    @buyer = User.find(@order.buyer_id)
+    
+    respond_to do |format|
+      OrderSoldNotifier.send_bookready_email(@buyer, @order).deliver
+      format.html { redirect_to adminpanel_url, notice: 'Email succesfully sent.' }
+    end
+  end
+
+  def delivered
+    @order = Order.find(params[:id])
+    Listing.update(@order.listing_id, delivered: true)
+
+    respond_to do |format|
+      format.html { redirect_to adminpanel_url, notice: 'Listing marked delivered.' }
+    end
+  end
+
+##############################################################################
+
   def sales
     @orders = Order.all.where(seller: current_user).order("created_at DESC")
   end

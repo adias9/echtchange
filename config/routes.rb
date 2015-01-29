@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   get 'pages/about'
   get 'pages/getstarted'
+  get 'adminpanel' => 'orders#adminpanel'
+  get 'sendnotify' => 'orders#sendnotify'
+  get 'delivered' => 'orders#delivered'
   get 'seller' => 'listings#seller'
   get 'sales' => 'orders#sales'
   get 'purchases' => 'orders#purchases'

@@ -4,7 +4,4 @@ class PagesController < ApplicationController
 
   def contact
   end
-
-  def categorization
-  end
 end

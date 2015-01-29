@@ -38,6 +38,7 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
     @listing.sold = false
+    @listing.delivered = false
     @listing.user_id = current_user.id
 
     respond_to do |format|
