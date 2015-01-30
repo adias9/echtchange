@@ -2,24 +2,7 @@
   <br>
 
   <div id="how-to">
-    <div class="homepage">
-      <span><%= image_tag("echtsquarelogo.png", alt: "Echtchange", style: "display: block; width: 115px; margin: 0 auto;") %></span>
-      <h2>How Do I Get Started?</h2>
-      <hr>
-      <% if user_signed_in? %>
-        <p>You're signed in! Check out the info below on how Echtchange works!</p>
-      <% else %>
-        <p>Check out the info below on how Echtchange works! If you'd like to begin buying and/or selling books, click the link below to sign up with your Princeton email!</p>
-        <br>
-        <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-success btn-lg", style: "display: block; width: 130px; margin: 0 auto; font-family: Avenir Next;" %>
-      <% end %>
-      <br>
-    </div>
-  </div>
-
-  <br>
-
-  <div id="why-us">
+    <span><%= image_tag("echtsquarelogo.png", alt: "Echtchange", style: "display: block; width: 115px; margin: 0 auto;") %></span>
     <h2>Our Simple Process</h2>
     <hr>
     <div class="center">
@@ -49,6 +32,23 @@
           <p>Post your book listing on our site, receive an email when it is sold, drop it off with an Echtchange representative in Frist, and immediately receive a Venmo for cash for your sold book.</p>
         </div>
       </div>   
+    </div>
+  </div>
+
+  <br>
+
+  <div id="why-us">
+    <div class="homepage">
+      <h2>How Do I Get Started?</h2>
+      <hr>
+      <% if user_signed_in? %>
+        <p>You're signed in! Check out the info below on how Echtchange works!</p>
+      <% else %>
+        <p>Check out the info above on how Echtchange works! If you'd like to begin buying and/or selling books, click the link below to sign up with your Princeton email!</p>
+        <br>
+        <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-success btn-lg", style: "display: block; width: 130px; margin: 0 auto; font-family: Avenir Next;" %>
+      <% end %>
+      <br>
     </div>
   </div>
   <br>
