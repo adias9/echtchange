@@ -69,6 +69,7 @@ class ListingsController < ApplicationController
   # DELETE /listings/1
   # DELETE /listings/1.json
   def destroy
+    @listing = Listing.find(params[:id])
     @listing.destroy
     respond_to do |format|
       format.html { redirect_to listings_url, notice: 'Listing was successfully deleted.' }
@@ -88,6 +89,7 @@ class ListingsController < ApplicationController
     end
 
     def check_user
+      @listing = Listing.find(params[:id])
       if current_user != @listing.user
         redirect_to root_url, alert: "Sorry, this listing belongs to someone else"
       end
