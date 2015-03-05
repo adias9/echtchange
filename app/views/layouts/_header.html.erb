@@ -17,37 +17,29 @@
         <li><%= link_to "About Us", pages_about_path %></li>
         <li><%= link_to "Get Started", pages_getstarted_path %></li>
         <li class="dropdown">  
-          <a class="dropdown-toggle" href="" data-toggle="dropdown">Course Subject<span class="caret"></span></a>  
+          <a class="dropdown-toggle" href="" data-toggle="dropdown">Category<span class="caret"></span></a>  
           <ul class="dropdown-menu">  
             <li>  
               <div class="yamm-content">  
                 <div class="row">   
-                  <ul class="col-sm-2 list-unstyled">
+                  <ul class="col-sm-4 list-unstyled">
                     <li><%= link_to "All", root_path %></li>
                     <li class="divider"></li>
-                    <li><%= link_to "AAS", root_path(:subject => "AAS") %></li>
-                    <li><%= link_to "AFS", root_path(:subject => "AFS") %></li>
-                    <li><%= link_to "AMS", root_path(:subject => "AMS") %></li>
-                    <li><%= link_to "ANT", root_path(:subject => "ANT") %></li>
-                    <li><%= link_to "AOS", root_path(:subject => "AOS") %></li>
-                    <li><%= link_to "APC", root_path(:subject => "APC") %></li>
-                    <li><%= link_to "ARA", root_path(:subject => "ARA") %></li>
-                    <li><%= link_to "ARC", root_path(:subject => "ARC") %></li>
-                    <li><%= link_to "ART", root_path(:subject => "ART") %></li>
-                    <li><%= link_to "AST", root_path(:subject => "AST") %></li>
-                    <li><%= link_to "ATL", root_path(:subject => "ATL") %></li>
-                    <li><%= link_to "BCS", root_path(:subject => "BCS") %></li>
-                    <li><%= link_to "CBE", root_path(:subject => "CBE") %></li>
-                    <li><%= link_to "CEE", root_path(:subject => "CEE") %></li>
-                    <li><%= link_to "CHI", root_path(:subject => "CHI") %></li>
-                    <li><%= link_to "CHM", root_path(:subject => "CHM") %></li>
+                    <li><%= link_to "Appliances", root_path(:subject => "Appliances") %></li>
+                    <li><%= link_to "Books", root_path(:subject => "Books") %></li>
+                    <li><%= link_to "Clothing", root_path(:subject => "Clothing") %></li>
+                    <li><%= link_to "Clothing Accessories", root_path(:subject => "Clothing Accessories") %></li>
+                    <li><%= link_to "Shoes", root_path(:subject => "Shoes") %></li>
                   </ul>
-                  <ul class="col-sm-2 list-unstyled">
-                    <li><%= link_to "CHV", root_path(:subject => "CHV") %></li>
-                    <li><%= link_to "CLA", root_path(:subject => "CLA") %></li>
-                    <li><%= link_to "CLG", root_path(:subject => "CLG") %></li>
-                    <li><%= link_to "COM", root_path(:subject => "COM") %></li>
-                    <li><%= link_to "COS", root_path(:subject => "COS") %></li>
+                  <ul class="col-sm-4 list-unstyled">
+                    <li><%= link_to "DVDs/Video Games", root_path(:subject => "DVDs/Video Games") %></li>
+                    <li><%= link_to "Electronics/Computers/Phones", root_path(:subject => "Electronics/Computers/Phones") %></li>
+                    <li><%= link_to "Dorm Room Items", root_path(:subject => "Dorm Room Items") %></li>
+                    <li><%= link_to "Tickets", root_path(:subject => "Tickets") %></li>
+                    <li><%= link_to "Misc", root_path(:subject => "Misc") %></li>
+                  </ul>
+
+                <!--
                     <li><%= link_to "CWR", root_path(:subject => "CWR") %></li>
                     <li><%= link_to "CZE", root_path(:subject => "CZE") %></li>
                     <li><%= link_to "DAN", root_path(:subject => "DAN") %></li>
@@ -137,6 +129,7 @@
                     <li><%= link_to "WWS", root_path(:subject => "WWS") %></li>
                     <li><%= link_to "Misc", root_path(:subject => "Misc") %></li>
                   </ul>
+                  -->
                 </div>  
               </div>  
             </li>  

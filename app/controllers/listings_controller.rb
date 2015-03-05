@@ -13,7 +13,7 @@ class ListingsController < ApplicationController
     if params[:subject]
       @listings = Listing.where(subject: params[:subject]).order("price ASC")
     else
-      @listings = Listing.all.order("price ASC")
+      @listings = Listing.all.order("created_at DESC")
     end
     #@listings = Listing.all.order("price DESC")
     #@listings = Listing.all.order("created_at DESC")
@@ -37,6 +37,7 @@ class ListingsController < ApplicationController
   # POST /listings.json
   def create
     @listing = Listing.new(listing_params)
+    @listing.price += 1.50
     @listing.sold = false
     @listing.delivered = false
     @listing.user_id = current_user.id

@@ -18,33 +18,33 @@
 
   <div class="form-group col-md-7">
     <%= f.label :name, "*Name" %>
-    <%= f.text_field :name, class: "form-control" %>
+    <%= f.text_field :name, :placeholder => 'Ex: Some ObjEcht', class: "form-control" %>
   </div>
 
   <div class="col-md-12"></div>
 
-  <div class="form-group col-md-2">
-    <%= f.label :subject, "*Subject" %>
-    <%= f.select(:subject, [['AAS'], ['AFS'], ['AMS'], ['ANT'], ['AOS'], ['APC'], ['ARA'], ['ARC'], ['ART'], ['AST'], ['ATL'], ['BCS'], ['CBE'], ['CEE'], ['CHI'], ['CHM'], ['CHV'], ['CLA'], ['CLG'], ['COM'], ['COS'], ['CWR'], ['CZE'], ['DAN'], ['EAP'], ['EAS'], ['ECO'], ['ECS'], ['EEB'], ['EGR'], ['ELE'], ['ENE'], ['ENG'], ['ENV'], ['EPS'], ['FIN'], ['FRE'], ['FRS'], ['GEO'], ['GER'], ['GHP'], ['GLS'], ['GSS'], ['HEB'], ['HIN'], ['HIS'], ['HLS'], ['HOS'], ['HUM'], ['ISC'], ['ITA'], ['JDS'], ['JPN'], ['JRN'], ['KOR'], ['LAO'], ['LAS'], ['LAT'], ['LIN'], ['MAE'], ['MAT'], ['MED'], ['MOD'], ['MOG'], ['MOL'], ['MSE'], ['MUS'], ['NES'], ['NEU'], ['ORF'], ['PAW'], ['PER'], ['PHI'], ['PHY'], ['PLS'], ['POL'], ['POP'], ['POR'], ['PSY'], ['QCB'], ['REL'], ['RES'], ['RUS'], ['SAS'], ['SLA'], ['SML'], ['SOC'], ['SPA'], ['STC'], ['SWA'], ['THR'], ['TPP'], ['TRA'], ['TUR'], ['TWI'], ['URB'], ['URD'], ['VIS'], ['WRI'], ['WWS'], ['Misc']], {}, {class: "form-control"}) %>
+  <div class="form-group col-md-7">
+    <%= f.label :subject, "*Category" %>
+    <%= f.select(:subject, [['Appliances'], ['Books'], ['Clothing'], ['Clothing Accessories'], ['Shoes'], ['DVDs/Video Games'], ['Electronics/Computers/Phones'], ['Dorm Room Items'], ['Tickets'], ['Misc']], {}, {class: "form-control"}) %>
   </div>
-  <div class="form-group col-md-2">
+  <!--<div class="form-group col-md-2">
     <%= f.label :number, "*Number" %>
     <%= f.text_field :number, class: "form-control" %>
-  </div>
-  <div class="form-group col-md-3">
+  </div>-->
+  <!--<div class="form-group col-md-3">
     <%= f.label :condition, "*Condition" %>
     <%= f.select(:condition, [['Acceptable'], ['Good'], ['Very Good'], ['Like New']], {}, {class: "form-control"}) %>
-  </div>
+  </div>-->
   <div class="form-group col-md-7">
-    <%= f.label :description %>
-    <%= f.text_area :description, class: "form-control" %>
+    <%= f.label :description, "Description (Optional)" %>
+    <%= f.text_area :description, :placeholder => 'Ex: Check Out My Cool ObjEcht!', class: "form-control" %>
   </div>
 
   <div class="col-md-12"></div>
 
   <div class="form-group col-md-7">
-    <%= f.label :price, "*Price (We take 6% of each Sale - See \"About Us\" page)" %>
-    <%= f.text_field :price, class: "form-control" %>
+    <%= f.label :price, "*Price (We take $1.50 of the sale for Delivery ONLY if the Buyer buys your Item after it is Delivered. Otherwise it is returned to you and relisted on the site automatically - See \"About Us\" page)" %>
+    <%= f.text_field :price, :placeholder => 'Ex: 20.15', class: "form-control" %>
   </div>
 
   <div class="col-md-12"></div>

@@ -4,34 +4,24 @@
 	    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   	</head>
   	<body>
-    	<h1>Your book is ready to be picked up, <%= @user.name %>!</h1>
-		<p>Check out your next steps below to pick up your book.</p>
+    	<h1>Your item will be on its way soon, <%= @user.name %>!</h1>
+		<p>Check out your next steps below to know when you'll receive your book.</p>
 		<ol type="1">
-  			<li>Grab your Prox.</li>
-  			<li>Print out this email or have it ready on your phone.</li>
-  			<li>Visit Frist Campus Center on the 1st floor and look for a representative at a table with an Echtchange sign during hours listed below to pick up your book.</li>
-  			<li>Check out Echtchange to sell some of your old books or see if any of your other books have been posted! </li>
+  			<li>Please be available to purchase your item upon delivery by an Echtchange representative during the hours listed below.</li>
+        <li>We take Credit Card, Venmo, or Cash.</li>
+  			<li>Use Echtchange to sell some of your old stuff or to see if anything new has been posted you'd want to buy! </li>
 		</ol>
 
-    <h2>Hours:</h2>
+    <h2>Delivery Hours:</h2>
     <ol type="1">
-      <li>Mon-Tues 5pm-12am</li>
-      <li>Wed 2pm-12am</li>
-      <li>Thu 1pm-4pm 9pm-12am</li>
-      <li>Fri 1pm-12am</li>
+      <li>Fri 9pm-12am</li>
     </ol>
 
-		<p>Looking forward to seeing you soon!</p>
+    <p>Looking forward to seeing you soon!</p>
 
-		<br>
+    <br>
 
-		<h2>Order Information:</h2>
-		<h4>(For use by Echtchange representative)</h4>
-		<ol type="1">
-  			<li><%= "Course: #{@order.listing.subject} #{@order.listing.number}" %></li>
-  			<li><%= "Listing id: #{@order.listing_id}" %></li>
-  			<li><%= "Buyer id: #{@order.buyer_id}" %></li>
-  		</ol>
+    <p>Questions? Email us at echtchange@gmail.com</p>
 		
 	</body>
 </html>

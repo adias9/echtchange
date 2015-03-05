@@ -8,15 +8,15 @@ class OrdersController < ApplicationController
     @orders = Order.all
   end
 
-  def sendnotify
-    @order = Order.find(params[:id])
-    @buyer = User.find(@order.buyer_id)
-    
-    respond_to do |format|
-      OrderSoldNotifier.send_bookready_email(@buyer, @order).deliver
-      format.html { redirect_to adminpanel_url, notice: 'Email succesfully sent.' }
-    end
-  end
+  #def sendnotify
+  #  @order = Order.find(params[:id])
+  #  @buyer = User.find(@order.buyer_id)
+  #  
+  #  respond_to do |format|
+  #    OrderSoldNotifier.send_bookready_email(@buyer, @order).deliver
+  #    format.html { redirect_to adminpanel_url, notice: 'Email succesfully sent.' }
+  #  end
+  #end
 
   def delivered
     @order = Order.find(params[:id])
@@ -33,6 +33,15 @@ class OrdersController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to adminpanel_url, notice: 'Listing marked undelivered.' }
+    end
+  end
+
+  def unsold
+    @order = Order.find(params[:id])
+    Listing.update(@order.listing_id, sold: false)
+
+    respond_to do |format|
+      format.html { redirect_to adminpanel_url, notice: 'Listing placed back for sale.' }
     end
   end
 
@@ -60,23 +69,27 @@ class OrdersController < ApplicationController
     @order.listing_id = @listing.id
     @order.buyer_id = current_user.id
     @order.seller_id = @seller.id
+    @buyer = User.find(@order.buyer_id)
 
-    Stripe.api_key = ENV["stripe_api_key"]
-    token = params[:stripeToken]
+    #Stripe.api_key = ENV["stripe_api_key"]
+    #token = params[:stripeToken]
 
-    begin
-      charge = Stripe::Charge.create(
-        :amount => (@listing.price * 100).floor,
-        :currency => "usd",
-        :card => token
-        )
-      flash[:notice] = "Thanks for ordering!"
-    rescue Stripe::CardError => e
-      flash[:danger] = e.message
-    end
+    #begin
+    #  charge = Stripe::Charge.create(
+    #    :amount => (@listing.price * 100).floor,
+    #    :currency => "usd",
+    #    :card => token
+    #    )
+    #  flash[:notice] = "Thanks for ordering!"
+    #rescue Stripe::CardError => e
+    #  flash[:danger] = e.message
+    #end
+
+    flash[:notice] = "Thanks for ordering!"
 
     respond_to do |format|
       if @order.save
+        OrderSoldNotifier.send_bookready_email(@buyer, @order).deliver
         OrderSoldNotifier.send_ordersold_email(@seller, @order).deliver
         Listing.update(params[:listing_id], sold: true)
         format.html { redirect_to root_url }

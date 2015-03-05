@@ -21,9 +21,10 @@
   <h1>ECHTchange</h1>
   <h2>(ĕktschānj)</h2>
   <p style="font-style: italic">&nbspverb</p>
-  <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp To trade items such as books through </p>
+  <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp To trade items through </p>
   <p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp an "Echt" (ĕkt) or honest and authentic manner.</p>
-  <h2>Announcement: Confirmation emails may be in your spam folder. Apologies to those who lost a user account in the accidental database reset.</h2>
+  <p>&nbsp</p>
+  <h2>Announcement: Sold/Bought emails may be in your spam folder. Apologies to those who lost a user account in the accidental database reset.</h2>
 </div>
 
 <div id="indexlist" class="col-xs-5 col-sm-3 col-md-2 left">
@@ -44,8 +45,8 @@
             <%= link_to image_tag(listing.image.url), listing %>
             <div class="caption">
               <h3><%= listing.name %></h3>
-              <h3><%= "#{listing.subject} #{listing.number}" %></h3>
-              <p><%= "Condition - #{listing.condition}" %></p>
+              <h3><%= "#{listing.subject}" %></h3>
+              <!--<p><%= "Condition - #{listing.condition}" %></p>-->
               <p><%= number_to_currency(listing.price) %></p>
             </div>
           </div>

@@ -5,12 +5,12 @@ class OrderSoldNotifier < ActionMailer::Base
   def send_ordersold_email(user, order)
     @user = user
     @order = order
-	mail( to: @user.email, subject: 'Your Book has Sold!' )
+	mail( to: @user.email, subject: 'Echtchange: Your Item has Sold!' )
   end
 
   def send_bookready_email(user, order)
     @user = user
     @order = order
-    mail( to: @user.email, subject: 'Your Book is Ready for Pickup!' )
+    mail( to: @user.email, subject: 'Echtchange: Next Steps for Your Purchase!' )
   end
 end

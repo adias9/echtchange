@@ -15,15 +15,17 @@
     </tr>
 
     <% @orders.each do |order| %>
-      <tr>
-        <td class="center"><%= image_tag order.listing.image.url(:thumb) %></td>
-        <td class="center"><%= order.listing.name %></td>
-        <td><%= "#{order.listing.subject} - #{order.listing.number}" %></td>
-        <td><%= "#{order.listing.condition} - #{order.listing.description}" %></td>
-        <td class="center"><%= number_to_currency(order.listing.price) %></td>
-        <td class="center"><%= order.buyer.name %></td>
-        <td class="center"><%= order.created_at.strftime("%B %-d, %Y") %></td>
-      </tr>
+      <% if order.listing.sold == true %>
+        <tr>
+          <td class="center"><%= image_tag order.listing.image.url(:thumb) %></td>
+          <td class="center"><%= order.listing.name %></td>
+          <td><%= "#{order.listing.subject} - #{order.listing.number}" %></td>
+          <td><%= "#{order.listing.condition} - #{order.listing.description}" %></td>
+          <td class="center"><%= number_to_currency(order.listing.price) %></td>
+          <td class="center"><%= order.buyer.name %></td>
+          <td class="center"><%= order.created_at.strftime("%B %-d, %Y") %></td>
+        </tr>
+      <% end %>
     <% end %>
   </table>
 

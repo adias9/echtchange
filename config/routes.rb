@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'sendnotify' => 'orders#sendnotify'
   get 'delivered' => 'orders#delivered'
   get 'undeliver' => 'orders#undeliver'
+  get 'unsold' => 'orders#unsold'
   get 'seller' => 'listings#seller'
   get 'sales' => 'orders#sales'
   get 'purchases' => 'orders#purchases'
