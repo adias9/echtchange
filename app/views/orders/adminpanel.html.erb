@@ -24,7 +24,7 @@
           <td><%= "#{order.listing.user.name} - #{order.address} #{order.city}" %></td>
           <td><%= "#{User.find(order.buyer_id).name} - #{order.address} #{order.city}" %></td>
 
-          <td><%= "#{number_to_currency(order.listing.price + 1.50)} - #{number_to_currency((order.listing.price + 1.50) * 1.03)}" %></td> <!--2.75 %-->
+          <td><%= "#{number_to_currency(order.listing.price + 1.50)} - #{number_to_currency((order.listing.price + 1.50) * 1.0275)}" %></td> <!--2.75 %-->
           <td><%= number_to_currency(order.listing.price + 1.50) %></td>
 
           <td>
