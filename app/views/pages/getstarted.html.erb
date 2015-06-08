@@ -13,7 +13,7 @@
             <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
           </span>
           <h3>Browse</h3>
-          <p>Quickly search for your Item by Category from the navbar and find the best deals on local goods. All without having to make an account!</p>
+          <p>Quickly search for your Item by Category from the navbar and find the best deals on goods. All without having to make an account!</p>
         </div>
         <div class="col-md-4">
           <span class="fa-stack fa-4x">
@@ -44,7 +44,7 @@
       <% if user_signed_in? %>
         <p>You're signed in! Check out the info below on how Echtchange works!</p>
       <% else %>
-        <p>Check out the info above on how Echtchange works! If you'd like to begin buying and/or selling books, click the link below to sign up with your Princeton email!</p>
+        <p>Check out the info above on how Echtchange works! If you'd like to begin buying and/or selling items, click the link below to sign up with your email!</p>
         <br>
         <%= link_to 'Sign Up', new_user_registration_path, class: "btn btn-success btn-lg", style: "display: block; width: 130px; margin: 0 auto; font-family: Avenir Next;" %>
       <% end %>

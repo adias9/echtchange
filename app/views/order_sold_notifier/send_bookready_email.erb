@@ -4,20 +4,15 @@
 	    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   	</head>
   	<body>
-    	<h1>Your item will be on its way soon, <%= @user.name %>!</h1>
-		<p>Check out your next steps below to know when you'll receive your book.</p>
+    	<h1>Your item should be on its way soon, <%= @user.name %>!</h1>
+		<p>Check out your next steps below to know when you'll receive your item.</p>
 		<ol type="1">
-  			<li>Please be available to purchase your item upon delivery by an Echtchange representative during the hours listed below.</li>
-        <li>We take Credit Card, Venmo, or Cash.</li>
-  			<li>Use Echtchange to sell some of your old stuff or to see if anything new has been posted you'd want to buy! </li>
+  			<li><%= "Please check your email as the seller of the item you purchased should be reaching out to you soon from #{User.find(@order.seller_id).email}!" %></li>
+        <li>If you do not receive your item within 7 days let us know and we will refund with you. In the spirit of "Echt" we appreciate our honest buyers and sellers, so we hope to here from you at echtchange@gmail.com </li>
+  			<li> Also if you have anything to sell think about listing it on Echtchange! </li>
 		</ol>
 
-    <h2>Delivery Hours:</h2>
-    <ol type="1">
-      <li>Fri 9pm-12am</li>
-    </ol>
-
-    <p>Looking forward to seeing you soon!</p>
+    <p>Looking forward to hearing about your experience!</p>
 
     <br>
 

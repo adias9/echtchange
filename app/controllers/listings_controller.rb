@@ -37,10 +37,23 @@ class ListingsController < ApplicationController
   # POST /listings.json
   def create
     @listing = Listing.new(listing_params)
-    @listing.price += 1.50
     @listing.sold = false
     @listing.delivered = false
     @listing.user_id = current_user.id
+
+    if current_user.recipient.blank?
+      Stripe.api_key = ENV["stripe_api_key"]
+      token = params[:stripeToken]
+
+      recipient = Stripe::Recipient.create(
+        :name => current_user.name,
+        :type => "individual",
+        :bank_account => token
+        )
+
+      current_user.recipient = recipient.id
+      current_user.save
+    end  
 
     respond_to do |format|
       if @listing.save

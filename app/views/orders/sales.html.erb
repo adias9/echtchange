@@ -7,10 +7,10 @@
     <tr>
       <th class="center">Image</th>
       <th class="center">Name</th>
-      <th class="center">Subject - Number</th>
-      <th class="center">Condition - Description</th>
+      <th class="center">Category</th>
+      <th class="center">Description</th>
       <th class="center">Price</th>
-      <th class="center">Customer</th>
+      <th class="center">Customer Email</th>
       <th class="center">Date Sold</th>
     </tr>
 
@@ -19,10 +19,10 @@
         <tr>
           <td class="center"><%= image_tag order.listing.image.url(:thumb) %></td>
           <td class="center"><%= order.listing.name %></td>
-          <td><%= "#{order.listing.subject} - #{order.listing.number}" %></td>
-          <td><%= "#{order.listing.condition} - #{order.listing.description}" %></td>
+          <td><%= "#{order.listing.subject}" %></td>
+          <td><%= "#{order.listing.description}" %></td>
           <td class="center"><%= number_to_currency(order.listing.price) %></td>
-          <td class="center"><%= order.buyer.name %></td>
+          <td class="center"><%= order.buyer.email %></td> <!-- "#{order.address} #{order.city} #{order.state} #{number_with_precision(order.zipcode, precision: 0)}" -->
           <td class="center"><%= order.created_at.strftime("%B %-d, %Y") %></td>
         </tr>
       <% end %>

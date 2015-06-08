@@ -7,10 +7,11 @@
       <th class="center">Image</th>
       <th class="center">Name</th>
       <th class="center">Listing ID</th>
-      <th class="center">Seller - Address</th>
-      <th class="center">Buyer - Address</th>
-      <th class="center">Buyer Price - (+Credit Card)</th>
-      <th class="center">Seller Transfer Amount</th>
+      <th class="center">Seller - Email</th>
+      <th class="center">Buyer - Email - Address</th>
+      <th class="center">Buyer Price - Seller Receive</th>
+      <th class="center">Gain on Sale</th>
+      <th class="center">Date Sold - Days Until Refund</th>
       <th class="center">Action</th>
     </tr>
 
@@ -21,12 +22,12 @@
           <td><%= "#{order.listing.name}" %></td>
           <td><%= "#{order.listing_id}" %></td>
 
-          <td><%= "#{order.listing.user.name} - #{order.address} #{order.city}" %></td>
-          <td><%= "#{User.find(order.buyer_id).name} - #{order.address} #{order.city}" %></td>
+          <td><%= "#{order.listing.user.name} - #{order.listing.user.email}" %></td>
+          <td><%= "#{User.find(order.buyer_id).name} - #{User.find(order.buyer_id).email} - #{order.address} #{order.city} #{order.state} #{order.zipcode}" %></td>
 
-          <td><%= "#{number_to_currency(order.listing.price + 1.50)} - #{number_to_currency((order.listing.price + 1.50) * 1.0275)}" %></td> <!--2.75 %-->
-          <td><%= number_to_currency(order.listing.price + 1.50) %></td>
-
+          <td><%= "#{number_to_currency(order.listing.price * 1.03)} - #{number_to_currency((order.listing.price) * 0.97)}" %></td> <!--2.75 %-->
+          <td><%= number_to_currency((order.listing.price * 0.06) - (order.listing.price * 0.029) - 0.30  ) %></td>
+          <td><%= "#{order.created_at.strftime("%Y %b %-d %H:%M:%S")} - #{7 - ((Time.now - order.created_at)/(60 * 60 * 24)).floor}" %></td>
           <td>
             <div class="btn-group">
               <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -55,10 +56,11 @@
       <th class="center">Image</th>
       <th class="center">Name</th>
       <th class="center">Listing ID</th>
-      <th class="center">Seller - Address</th>
-      <th class="center">Buyer - Address</th>
-      <th class="center">Buyer Price - (+Credit Card)</th>
-      <th class="center">Seller Transfer Amount</th>
+      <th class="center">Seller - Email</th>
+      <th class="center">Buyer - Email - Address</th>
+      <th class="center">Buyer Price - Seller Receive</th>
+      <th class="center">Gain on Sale</th>
+      <th class="center">Date Sold</th>
       <th class="center">Action</th>
     </tr>
 
@@ -69,11 +71,12 @@
           <td><%= "#{order.listing.name}" %></td>
           <td><%= "#{order.listing_id}" %></td>
 
-          <td><%= "#{order.listing.user.name} - #{order.address} #{order.city}" %></td>
-          <td><%= "#{User.find(order.buyer_id).name} - #{order.address} #{order.city}" %></td>
+          <td><%= "#{order.listing.user.name} - #{order.listing.user.email}" %></td>
+          <td><%= "#{User.find(order.buyer_id).name} - #{User.find(order.buyer_id).email} - #{order.address} #{order.city} #{order.state} #{order.zipcode}" %></td>
 
-          <td><%= "#{number_to_currency(order.listing.price + 1.50)} - #{number_to_currency((order.listing.price + 1.50) * 1.03)}" %></td> <!--2.75 %-->
-          <td><%= number_to_currency(order.listing.price + 1.50) %></td>
+          <td><%= "#{number_to_currency(order.listing.price * 1.03)} - #{number_to_currency((order.listing.price) * 0.97)}" %></td> <!--2.75 %-->
+          <td><%= number_to_currency((order.listing.price * 0.06) - (order.listing.price * 0.029) - 0.30 ) %></td>
+          <td><%= "#{order.created_at.strftime("%Y %b %-d %H:%M:%S")}" %></td>
 
           <td>
             <div class="btn-group">

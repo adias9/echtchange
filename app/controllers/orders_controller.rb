@@ -22,6 +22,18 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     Listing.update(@order.listing_id, delivered: true)
 
+    @listing = Listing.find(@order.listing_id)
+    @seller = User.find(@order.seller_id)
+
+    Stripe.api_key = ENV["stripe_api_key"]
+
+    transfer = Stripe::Transfer.create(
+      :amount => (@listing.price * 97).floor,
+      :currency => "usd",
+      :recipient => @seller.recipient
+      )
+    flash[:notice] = "Transfer completed!"
+
     respond_to do |format|
       format.html { redirect_to adminpanel_url, notice: 'Listing marked delivered.' }
     end
@@ -71,21 +83,19 @@ class OrdersController < ApplicationController
     @order.seller_id = @seller.id
     @buyer = User.find(@order.buyer_id)
 
-    #Stripe.api_key = ENV["stripe_api_key"]
-    #token = params[:stripeToken]
+    Stripe.api_key = ENV["stripe_api_key"]
+    token = params[:stripeToken]
 
-    #begin
-    #  charge = Stripe::Charge.create(
-    #    :amount => (@listing.price * 100).floor,
-    #    :currency => "usd",
-    #    :card => token
-    #    )
-    #  flash[:notice] = "Thanks for ordering!"
-    #rescue Stripe::CardError => e
-    #  flash[:danger] = e.message
-    #end
-
-    flash[:notice] = "Thanks for ordering!"
+    begin
+      charge = Stripe::Charge.create(
+        :amount => (@listing.price * 103).floor,
+        :currency => "usd",
+        :source => token
+        )
+      flash[:notice] = "Thanks for ordering!"
+    rescue Stripe::CardError => e
+      flash[:danger] = e.message
+    end
 
     respond_to do |format|
       if @order.save
@@ -107,6 +117,6 @@ class OrdersController < ApplicationController
     end
 
     def order_params
-      params.require(:order).permit(:address, :city, :state)
+      params.require(:order).permit(:address, :city, :state, :zipcode)
     end
 end

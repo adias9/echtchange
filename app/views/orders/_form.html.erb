@@ -26,18 +26,25 @@
         <noscript>Javascript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
       </div>
 
-      <p>Please be aware that we charge you for the item ONLY if you are satisfied upon its delivery.  $1.50 will be added to this total charge for delivery. We accept Credit Card (for a 3% of sale charge from Square), Venmo, or Cash for the total charge.</p>
+      <p>Please be aware that we ONLY charge you for the item once you have received it. An additional 3% of your purchase will be added to your total charge with 1.5% going towards credit card services and 1.5% towards our own operating costs.</p>
 
       <div class="form-group">
-        <%= f.label :address, "Residential Hall" %>
-        <%= f.text_field :address, :placeholder => 'Witherspoon', class: "form-control" %>
+        <%= f.label :address, "Address" %>
+        <%= f.text_field :address, :placeholder => '1234 Echtcellent Way', class: "form-control" %>
       </div>
       <div class="form-group">
-        <%= f.label :city, "Room Number" %>
-        <%= f.text_field :city, :placeholder => '102', class: "form-control" %>
+        <%= f.label :city, "City" %>
+        <%= f.text_field :city, :placeholder => 'Echtor', class: "form-control" %>
       </div>
-
-      <!--
+      <div class="form-group">
+        <%= f.label :state, "State" %>
+        <%= f.text_field :state, :placeholder => 'TX', class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.label :zipcode, "Zipcode" %>
+        <%= f.text_field :zipcode, :placeholder => '12345', class: "form-control" %>
+      </div>
+      
       <div class="form-group">
         <div class="row">
           <div class="col-md-8">
@@ -61,7 +68,7 @@
             <%= select_year nil, { start_year: Date.today.year, end_year: Date.today.year+10 }, { :name => nil, :'data-stripe' => "exp-year", class: "form-control" } %>
           </div>
         </div>
-      </div> -->
+      </div> 
 
       <div class="form-group">
         <%= f.submit "Complete Order", class: "btn btn-success" %>

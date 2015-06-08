@@ -8,13 +8,17 @@
 		<div class="col-md-6">
             <h3><%= @listing.name %></h3>
             <h4><%= "#{@listing.subject} #{@listing.number}" %></h4>
-            <h4><%= @listing.condition %></h4>
-            <p><%= number_to_currency(@listing.price) %></p>
-			<p><%= @listing.description %></p>
+            <h4><%= @listing.description %></h4>
+            <p>Total Price <%= number_to_currency(@listing.price * 1.03) %></p>
+            <p style="font-size: 13px;">(<%= number_to_currency(@listing.price * 0.03) %> was added for credit cards fees and for Echtchange's costs, each 1.5% of the price, respectively)</p>
+			
 			<br>
-			<div class="center">
-				<%= link_to "Buy It Now", new_listing_order_path(@listing), class: "btn btn-primary", data: { no_turbolink: true } %>
-			</div>
+			
+			<% if current_user != @listing.user %>
+				<div class="center">
+					<%= link_to "Buy It Now", new_listing_order_path(@listing), class: "btn btn-primary", data: { no_turbolink: true } %>
+				</div>
+			<% end %>
 		</div>
 	</div>
 

@@ -4,21 +4,16 @@
 	    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   	</head>
   	<body>
-    	<h1>Your book has sold, <%= @user.name %>!</h1>
+    	<h1>Your item has sold, <%= @user.name %>!</h1>
 		<p>Check out your next steps for delivery.</p>
 		<ol type="1">
-  			<li><%= "Grab your #{@order.listing.subject}" %></li>
-  			<li>Please be ready for an Echtchange representative to pick up your item during hours listed below.</li>
-        <li>Please be available to receive your item during this time as well in the case it does not sell.</li>
-  			<li>Check out Echtchange to buy something with your new earnings or even to sell more of your stuff! </li>
+  			<li><%= "First grab your #{@order.listing.name}" %></li>
+  			<li><%= "You should now reach out to the buyer of your item at #{User.find(@order.buyer_id).email}" %></li>
+        <li>Please coordinate with them the delivery method and email us at @echtchange@gmail.com when you have either dropped off the item or shipped the item. In the spirit of "Echt" we appreciate our honest buyers and sellers, so we look forward to hearing from you.</li>
+  			<li>Finally check out Echtchange to purchase something with your new earnings or even to sell more of your items! </li>
 		</ol>
 
-    <h2>Pick Up Hours:</h2>
-    <ol type="1">
-      <li>Fri 9pm-12am</li>
-    </ol>
-
-		<p>Looking forward to seeing you soon!</p>
+		<p>Looking forward to hearing from you soon!</p>
 
 		<br>
 
